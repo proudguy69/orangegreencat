@@ -1,0 +1,25 @@
+{
+  "name": "orangegreencat2",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/content": "^3.9.0",
+    "@nuxt/ui": "^4.2.1",
+    "@nuxtjs/device": "^4.0.0",
+    "better-sqlite3": "^12.5.0",
+    "nuxt": "^4.2.2",
+    "typescript": "^5.9.3",
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "shiki": "^3.22.0"
+  }
+}
