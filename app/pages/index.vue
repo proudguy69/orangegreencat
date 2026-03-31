@@ -71,14 +71,14 @@ import SmpHeader from '~/components/SmpHeader.vue';
 
 
 const toast = useToast()
-const serverIp = 'smp.orangegreencat.com';
+const serverIp = ref('smp.orangegreencat.com');
 
 const copyIP = () => {
-  navigator.clipboard.writeText(serverIp);
+  navigator.clipboard.writeText(serverIp.value);
   
   toast.add({
     title: 'Copied!',
-    description: `The IP (${serverIp}) has been copied to your clipboard.`,
+    description: `The IP (${serverIp.value}) has been copied to your clipboard.`,
     icon: 'i-heroicons-check-circle',
     color: 'success'
   })
