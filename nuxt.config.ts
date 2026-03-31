@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   modules: ['@nuxt/content', '@nuxt/ui', "@nuxtjs/device"],
   css: ['~/assets/css/main.css'],
   nitro: {
-    preset: 'cloudflare'
+    preset: 'cloudflare-pages'
   },
   // mdc: {
   //   highlight: {
