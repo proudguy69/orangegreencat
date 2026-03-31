@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/content', '@nuxt/ui', "@nuxtjs/device"],
   css: ['~/assets/css/main.css'],
+  nitro: {
+    preset: 'cloudflare'
+  },
   // mdc: {
   //   highlight: {
   //     theme: "min-nord",
