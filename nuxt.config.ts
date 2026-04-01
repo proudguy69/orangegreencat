@@ -2,10 +2,15 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/content', '@nuxt/ui', "@nuxtjs/device"],
+  modules: ["nitro-cloudflare-dev", "@nuxt/ui", "@nuxtjs/device", "@nuxt/content"],
   css: ['~/assets/css/main.css'],
   nitro: {
-    preset: 'cloudflare-pages'
+    preset: "cloudflare_module",
+
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true
+    }
   },
   // mdc: {
   //   highlight: {
