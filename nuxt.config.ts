@@ -2,14 +2,21 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ["nitro-cloudflare-dev", "@nuxt/ui", "@nuxtjs/device", "@nuxt/content"],
+  modules: ["@nuxt/ui", "@nuxtjs/device", "@nuxt/content"],
   css: ['~/assets/css/main.css'],
   nitro: {
-    preset: "cloudflare_module",
-
+    preset: "cloudflare_pages",
     cloudflare: {
       deployConfig: true,
-      nodeCompat: true
+      nodeCompat: true,
+      wrangler: {
+        name: 'orangegreencat',
+        d1_databases: [{
+          binding: 'orangegreencat',
+          database_name: 'orangegreencat',
+          database_id: 'a8c1ada3-60d1-4f8e-8854-fd49ca84b173'
+        }]
+      }
     }
   },
   // mdc: {
@@ -25,6 +32,10 @@ export default defineNuxtConfig({
           langs: ["java", "diff"]
         }
       }
+    },
+    database: {
+      type: 'd1',
+      bindingName: 'orangegreencat'
     }
   },
   vite: {
